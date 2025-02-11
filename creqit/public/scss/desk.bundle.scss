@@ -1,6 +1,7 @@
 @import "creqit/public/css/fonts/fontawesome/font-awesome.min.css";
 @import "creqit/public/css/octicons/octicons.css";
-@import "creqit/public/css/fonts/inter/inter.scss";
+//@import "creqit/public/css/fonts/inter/inter.scss";
+@import "creqit/public/css/fonts/figtree/figtree.scss";
 @import "~frappe-charts/dist/frappe-charts.min";
 @import "~plyr/dist/plyr";
 @import "./desk/index";
@@ -13,7 +14,7 @@
 
 body {
 	/*font-family: "Roboto", sans-serif !important;*/
-  font-family: "Instrument Sans", serif !important;//creqit.v1.sevval//
+  font-family: "Figtree", serif !important;//creqit.v1.sevval//
 }
 /**/
 [data-page-route=Workspaces] .layout-main {

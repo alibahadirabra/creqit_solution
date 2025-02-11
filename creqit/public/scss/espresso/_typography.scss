@@ -1,6 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap');
+//@import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap');
+@import "creqit/public/css/fonts/figtree/figtree.scss";
 :root {
-	--font-stack: "InterVariable", "Inter", "-apple-system", "BlinkMacSystemFont", "Segoe UI",
+	--font-stack: "InterVariable", "Inter", "Figtree", "-apple-system", "BlinkMacSystemFont", "Segoe UI",
 		"Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
 		sans-serif;
 	// font size
@@ -114,7 +115,7 @@ $letter-space-heavy: (
 }
 //creqit.v1.sevval//
 @mixin creqit-display($size, $weight: medium) {
-	font-family: "Instrument Sans", serif  !important;
+	font-family: "Figtree", serif  !important;
 	font-size: var(--creqit-text-#{$size})  !important;
 	font-weight: var(--creqit-weight-#{$weight})  !important;
 }
@@ -139,7 +140,7 @@ $letter-space-heavy: (
 }
 
 @mixin creqit-heading($size, $weight: medium) {
-	font-family: "Instrument Sans", serif !important;
+	font-family: "Figtree", serif !important;
 	font-weight: var(--creqit-weight-#{$weight}) !important;
 	font-size: var(--creqit-text-#{$size}) !important;
 }
@@ -158,7 +159,7 @@ $letter-space-heavy: (
 }
 
 @mixin creqit-text($type, $size, $weight) {
-	font-family: "Instrument Sans", serif  !important;
+	font-family: "Figtree", serif  !important;
 	font-weight: var(--creqit-weight-#{$weight}) !important;
 	font-size: var(--creqit-text-#{$size}) !important;
 }

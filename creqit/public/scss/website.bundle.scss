@@ -1,4 +1,5 @@
 @import "./website/index";
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap');
 body[data-path="me"],
 body[data-path^="update-profile"],
 body[data-path="update-password"],
@@ -54,16 +55,9 @@ body[data-path="third_party_apps"] {
 	}
 }
 /*#UPDATES --sevval*/
-@font-face {
-	font-family: 'Manrope';
-	src: url('/assets/creqit/css/fonts/manrope/Manrope-VariableFont_wght.ttf') format('tff');
-	font-weight: normal;
-	font-style: normal;
-  }
-  
   // Bu fontu global olarak kullan
 body {
-	font-family: 'Manrope', sans-serif !important;
+	font-family: 'Figtree', sans-serif !important;
 }
 /**/
 body[data-path="me"] {
