@@ -8,7 +8,7 @@ $gray-200: #ededed;
 $gray-300: #e2e2e2;
 $gray-400: #c7c7c7;
 $gray-500: #999999;
-$gray-600: #7c7c7c;
+//$gray-600: #7c7c7c;
 $gray-700: #525252;
 $gray-800: #383838;
 //$gray-900: #171717;
@@ -19,7 +19,7 @@ $gray-800: #383838;
 // $gray-300: #e2e2e2;
 // $gray-400: #c7c7c7;
 // $gray-500: #1F3BAD;
-// $gray-600: #182F8B;
+$gray-600: #171B26;
 // $gray-700: #122368;
 // $gray-800: #0C183D;
 $gray-900: #0C183D;
@@ -202,6 +202,7 @@ $light-yellow: #fef4e2;
 	--creqit-dark-checkbox: #171B26;
 	--creqit-dark-checkbox-disabled: #343947;
 	--creqit-input-label: #CECFD2;
+	--creqit-dropdown-active: #171B26;
 
 	--creqit-border-white: #FFFFFF;
 	--creqit-border-disabled-25: #F6F8FA;
@@ -239,17 +240,13 @@ $light-yellow: #fef4e2;
 
 	--creqit-divider-color: #12376914;//creqit.v1.sevval//
 
-	--creqit-alert-yellow: linear-gradient(0deg, rgba(255, 255, 255, 0.93), rgba(255, 255, 255, 0.93)),
-	linear-gradient(0deg, rgba(255, 205, 76, 0.05), rgba(255, 205, 76, 0.05));
+	--creqit-alert-yellow:#FFCD4C0D;
 	--creqit-alert-yellow-boxshadow: 0px 0px 0px 1px rgba(255, 102, 52, 0.24), 0px 1px 2px 0px rgba(255, 102, 52, 0.12), 0px 12px 24px -12px rgba(255, 102, 52, 0.2);
-	--creqit-alert-red: linear-gradient(0deg, rgba(255, 255, 255, 0.93), rgba(255, 255, 255, 0.93)),
-	linear-gradient(0deg, rgba(223, 28, 65, 0.02), rgba(223, 28, 65, 0.02));
+	--creqit-alert-red: #DF1C4105;
 	--creqit-alert-red-boxshadow: 0px 0px 0px 1px rgba(223, 28, 65, 0.16), 0px 1px 2px 0px rgba(150, 19, 44, 0.12), 0px 12px 24px -12px rgba(150, 19, 44, 0.24);
-	--creqit-alert-green: linear-gradient(0deg, rgba(255, 255, 255, 0.93), rgba(255, 255, 255, 0.93)),
-	linear-gradient(0deg, rgba(64, 196, 170, 0.05), rgba(64, 196, 170, 0.05));
+	--creqit-alert-green: #40C4AA0D;
 	--creqit-alert-green-boxshadow: 0px 0px 0px 1px rgba(64, 196, 170, 0.28), 0px 1px 2px 0px rgba(64, 196, 170, 0.16), 0px 12px 24px -12px rgba(24, 78, 68, 0.24);
-	--creqit-alert-blue: linear-gradient(0deg, rgba(255, 255, 255, 0.93), rgba(255, 255, 255, 0.93)),
-	linear-gradient(0deg, rgba(95, 87, 255, 0.04), rgba(95, 87, 255, 0.04));
+	--creqit-alert-blue: #5F57FF0A;
 	--creqit-alert-blue-boxshadow: 0px 0px 0px 1px rgba(126, 67, 255, 0.2), 0px 1px 2px 0px rgba(126, 67, 255, 0.12), 0px 12px 24px -12px rgba(54, 29, 109, 0.24);
 	--creqit-dark-mode-white: rgba(255, 255, 255, 0.95);
 	--creqit-dark-mode-white-boxshadow: 0px 0px 0px 1px rgba(18, 55, 105, 0.04), 0px 1px 2px 0px rgba(164, 172, 185, 0.12), 0px 12px 24px -12px rgba(54, 57, 74, 0.12);

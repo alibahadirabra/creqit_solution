@@ -7,10 +7,10 @@
 .btn {
 	border: none;
 	height: 40px;//creqit.v1.sevval//
-	padding: 6px 8px;//creqit.v1.sevval//
+	padding: 8px 10px;//creqit.v1.sevval//
 	@include creqit-text(label, s, medium);//creqit.v1.sevval//
 	&:not(.btn-md):not(.btn-lg) {
-		padding: 4px 8px;
+		padding: 8px 10px;//creqit.v1.sevval//
 	}
 	border-radius: var(--border-radius);
 	box-shadow: none;
@@ -125,7 +125,7 @@
 	white-space: nowrap;
 	--icon-stroke: currentColor;
 	--icon-fill-bg: var(--btn-primary);
-	box-shadow: var(--btn-primary-boxshadow);//creqit.v1.sevval//
+	//box-shadow: var(--btn-primary-boxshadow);//creqit.v1.sevval//
 	&:hover{
 		background: var(--btn-primary-hover) !important;/*#UPDATES --sevval*/
 		border: 1px solid;

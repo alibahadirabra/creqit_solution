@@ -145,6 +145,9 @@ creqit.search.AwesomeBar = class AwesomeBar {
 	}
 
 	add_help() {
+		this.options = this.options.filter(item => {
+			return typeof item.route === 'string' && !item.route.startsWith('Workspaces');
+		});//creqit.v1.sevval //ilk listede workspace ekranları gelmesin diye eklendi
 		this.options.push({
 			value: __("Help on Search"),
 			index: -10,
@@ -224,11 +227,13 @@ creqit.search.AwesomeBar = class AwesomeBar {
 		}
 
 		//administrator olmayan kullanıcılar verilen kelimelerin search işlemini yapabilecek <<creqit.v1.sevval
+		//search kelimeleri
 		if (creqit.session.user !== "Administrator") {
-			const keywordsToShow = ["lead", "customer", "issue", "task tracking", "transfer of tasks",
-				"communication", "performance", "sla", "service level", "customer group", "department", "campaign",
-				"lead source", "issue priority", "issue type", "territory", "sales person", "sales stage",
-				"user", "email account", "scripted message", "contracts", "activity log", "view log"
+			const keywordsToShow = ["targeting", "key result", "create budget", "approval processes", "expense request", 
+				"income recognition", "budget item", "department item", "chart", "period item", "sub-budget item", 
+				"currency item", "budget distribution", "exchange rate", "new budget", "supplier", "mahalle", "il", "ilce",
+				"budgetaddress", "company definition", "activity item", "company officials", "period item select", 
+				"email account", "scripted message", "contracts", "activity log", "view log"
 			];
 			options = options.filter(item => {
 				return keywordsToShow.some(keyword => 

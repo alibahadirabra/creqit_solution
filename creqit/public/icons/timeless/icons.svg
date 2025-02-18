@@ -137,9 +137,9 @@ Tip: use lucide.svg in /icons for all downloaded icons
 		<path d="M8 4v8M4 8h8"  stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
 	</symbol>
 
-	<symbol viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" id="icon-add">
-		<path d="M8.00209 3L8 13" stroke-linecap="round" stroke-linejoin="round"/>
-		<path d="M13 8.00223L3 8" stroke-linecap="round" stroke-linejoin="round"/>
+	<symbol viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" id="icon-add">
+		<path d="M10 4.75V15.25" stroke-linecap="round" stroke-linejoin="round"/>
+		<path d="M4.75 10H15.25" stroke-linecap="round" stroke-linejoin="round"/>
 	</symbol>
 
 	<symbol viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" id="icon-remove">

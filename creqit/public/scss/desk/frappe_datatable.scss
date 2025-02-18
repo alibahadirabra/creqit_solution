@@ -193,3 +193,14 @@ table td.dt-cell {
 		background-color: transparent;
 	}
 }
+.datatable{
+	border-radius: 10px;
+}
+[data-route^="List/"][data-route$="/Report"] {
+	.datatable{
+		border: 1px solid var(--border-color);
+	}
+}
+.dt-row-header .dt-cell {
+    border-top: none;
+}//creqit.v1.sevval//

@@ -180,6 +180,7 @@
 	@extend .list-row;
 	cursor: default;
 	//background-color: var(--subtle-fg);
+	font-weight: var(--creqit-weight-medium);//creqit.v1.sevval//
 	background-color: var(--list-head-bg);
 	border-radius: var(--border-radius);
 	height: var(--list-row-height);
@@ -188,6 +189,9 @@
 	.list-subject {
 		font-weight: normal;
 	}
+	.level-item {
+		font-weight: var(--creqit-weight-medium);
+	}//creqit.v1.sevval//
 
 	.checkbox-actions {
 		display: none;
@@ -436,7 +440,7 @@ input.list-header-checkbox {
 	}
 
 	.filter-selector .btn-group {
-		margin: var(--margin-xs);
+		margin: var(--margin-xs) 0 var(--margin-xs) var(--margin-md);
 
 		.filter-label {
 			display: inline-block;
@@ -454,7 +458,7 @@ input.list-header-checkbox {
 
 	.sort-selector {
 		.btn-group {
-			margin: var(--margin-xs) 0 var(--margin-xs) var(--margin-xs);
+			margin: var(--margin-xs) 0 var(--margin-xs) var(--margin-md);
 		}
 	}
 }

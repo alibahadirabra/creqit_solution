@@ -334,8 +334,11 @@ select.input-xs {
 }
 
 .bold {
-	font-weight: var(--weight-semibold) !important;
+	font-weight: var(--weight-semibold);
 }
+.regular {
+	font-weight: var(--weight-regular) !important;
+}//creqit.v1.sevval//
 
 .text-color {
 	color: var(--text-color);
@@ -380,6 +383,7 @@ select.input-xs {
 	}
 	a:active {
 		--icon-stroke: #{$component-active-color};
+		background-color: var(--creqit-dropdown-active-bg);//creqit.v1.sevval//
 	}
 
 	.divider,

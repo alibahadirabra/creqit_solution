@@ -204,8 +204,8 @@ body {
 		.sidebar-item-label {
 			display: none;
 			font-size: var(--creqit-text-m);
-			font-weight: var(--weight-semibold);
-
+			//font-weight: var(--weight-semibold);
+			font-weight: var(--weight-regular); //sidebar weight semibold dan regular değişti <<creqit.v1.sevval
 		}
 
 		.item-anchor {

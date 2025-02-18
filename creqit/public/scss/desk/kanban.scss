@@ -7,17 +7,17 @@
 }
 
 [data-theme="dark"] {
-	--kanban-column-bg: var(--gray-700);
-	--kanban-card-bg: var(--gray-800);
-	--kanban-new-card-bg: var(--gray-700);
-	--kanban-new-card-hover-bg: var(--gray-800);
-}
+	--kanban-column-bg: var(--creqit-dark-background);
+	--kanban-card-bg: var(--creqit-dark-bg);
+	--kanban-new-card-bg: var(--creqit-dark-background);
+	--kanban-new-card-hover-bg: var(--creqit-dark-bg);
+}//creqit.v1.sevval//
 
 .kanban {
 	display: flex;
 	gap: 0.5em;
 	overflow-y: hidden;
-	margin: var(--margin-sm);
+	margin: var(--margin-sm) 0;//creqit.v1.sevval//
 
 	-ms-overflow-style: none; /* IE and Edge */
 	scrollbar-width: none; /* Firefox */
@@ -339,6 +339,19 @@ body[data-route*="Kanban"] {
 		}
 	}
 }
+
+[data-theme="dark"] {
+    body[data-route*="Kanban"] {
+        .kanban .kanban-column {
+            background-color: var(--creqit-dark-background) !important;
+			.kanban-column-header {
+				.indicator-pill {
+					background-color: var(--creqit-dark-background) !important;
+				}
+			}
+        }
+    }
+}//creqit.v1.sevval//
 
 .edit-card-title {
 	.h4 {

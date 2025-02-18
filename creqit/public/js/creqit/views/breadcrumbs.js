@@ -90,7 +90,8 @@ creqit.breadcrumbs = {
 	},
 
 	append_breadcrumb_element(route, label) {
-		if (label === "Yönetim" || label==="Panel" || label==="Kullanıcılar" || label==="Araçlar" || label==="Geliştir" ) {
+		//üst breadcrumbs düzenlemesi
+		if (label === "Bütçe Yönetimi" || label==="Panel" || label==="Kullanıcılar" || label==="Araçlar" || label==="Geliştir" || label==="Gösterge Paneli" || label==="Belge Türü" ) {
 			return; // Fonksiyonu durdur ve ekleme yapma
 		}//geçici olarak eklendi. breadcrumbs düzelince silinecek <<creqit.v1.sevval
 		const el = document.createElement("li");

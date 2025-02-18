@@ -91,9 +91,10 @@
 }
 
 .dropdown-item:active {
-	color: var(--fg-color);
+	color: var(--creqit-text-color);//creqit.v1.sevval//
 	text-decoration: none;
-	background-color: var(--gray-600);
+	//background-color: var(--gray-600);
+	background-color: var(--creqit-dropdown-active-bg) !important;//creqit.v1.sevval//
 }
 
 .dropdown-item:active:hover {

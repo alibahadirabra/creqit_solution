@@ -22,7 +22,8 @@ $disabled-input-height: 40px;//22px;
 
 	--margin-xs: 5px;
 	--margin-sm: 10px;
-	--margin-md: 15px;
+	//--margin-md: 15px;
+	--margin-md: 16px;//creqit.v1.sevval//
 	--margin-lg: 20px;
 	--margin-xl: 30px;
 	--margin-2xl: 40px;
@@ -93,6 +94,7 @@ $disabled-input-height: 40px;//22px;
 	--text-on-green: var(--creqit-secondary-green-300);
 	--text-on-gray: var(--creqit-text-loud-900);
 	--dropdown-text: var(--creqit-text-muted-600);
+	--creqit-dropdown-active-bg: var(--creqit-background-pressed-100);//creqit.v1.sevval//
 	//****************/
 
 	// alert colors
@@ -219,6 +221,7 @@ $disabled-input-height: 40px;//22px;
 	--input-disabled: var(--creqit-background-disabled-0);
 	--input-label: var(--creqit-text-muted-600);
 	--input-hint: var(--creqit-text-normal-500);
+	--input-boxshadow-focus-error: 0px 0px 0px 1px #DF1C41, 0px 0px 0px 2px #FFFFFF, 0px 0px 0px 3px #DF1C413D, 0px 1px 2px 0px #96132C52;//creqit.v1.sevval//
 
 	// Checkbox
 	--checkbox-right-margin: var(--margin-xs);
@@ -242,6 +245,7 @@ $disabled-input-height: 40px;//22px;
 	--radio-focus: 0px 0px 0px 1px #335CFF, 0px 0px 0px 2px #FFFFFF, 0px 0px 0px 3px rgba(12, 24, 61, 0.3215686275), 0px 1px 2px 0px rgba(12, 24, 61, 0.4);
 	--radio-checked: var(--creqit-lavender-blue-100);
 	--radio-checked-boxshadow: 0px 0px 0px 1px #335CFF, 0px 0px 0px 2px #FFFFFF, 0px 0px 0px 3px #0C183D80, 0px 1px 2px 0px #0C183D80;
+	--checkbox-checked-disabled-border: var(--creqit-background-pressed-100);//creqit.v1.sevval//
 	// switch
 	--switch-bg: var(--gray-300);
 

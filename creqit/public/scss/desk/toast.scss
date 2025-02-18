@@ -13,31 +13,31 @@
 	&.red {
 		--toast-bg: var(--alert-bg-danger);
 		--box-shadow: var(--alert-bg-danger-boxshadow);//creqit.v1.sevval//
-		--toast-text: var(--creqit-text-normal-500);//<<creqit.v1.sevval
+		--toast-text: var(--creqit-text-color);//<<creqit.v1.sevval
 	}
 
 	&.yellow {
 		--toast-bg: var(--alert-bg-warning);
 		--box-shadow: var(--alert-bg-warning-boxshadow);//creqit.v1.sevval//
-		--toast-text: var(--creqit-text-normal-500);//<<creqit.v1.sevval
+		--toast-text: var(--creqit-text-color);//<<creqit.v1.sevval
 	}
 
 	&.orange {
 		--toast-bg: var(--alert-bg-warning);
 		--box-shadow: var(--alert-bg-warning-boxshadow);//creqit.v1.sevval//
-		--toast-text: var(--creqit-text-normal-500);//<<creqit.v1.sevval
+		--toast-text: var(--creqit-text-color);//<<creqit.v1.sevval
 	}
 
 	&.blue {
 		--toast-bg: var(--alert-bg-info);
 		--box-shadow: var(--alert-bg-info-boxshadow);//creqit.v1.sevval//
-		--toast-text: var(--creqit-text-color);//<<creqit.v1.sevval
+		--toast-text: var(--creqit-text-normal-500);//<<creqit.v1.sevval
 	}
 
 	&.green {
 		--toast-bg: var(--alert-bg-success);
 		--box-shadow: var(--alert-bg-success-boxshadow);//creqit.v1.sevval//
-		--toast-text: var(--creqit-text-color);//<<creqit.v1.sevval
+		--toast-text: var(--creqit-text-normal-500);//<<creqit.v1.sevval
 	}
 
 	box-shadow: var(--box-shadow) !important;//creqit.v1.sevval//

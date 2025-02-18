@@ -718,7 +718,7 @@ export default class GridRow {
 				if (column.is_invalid) {
 					column.addClass("invalid");
 				} else if (df.reqd || df.bold) {
-					column.addClass("bold");
+					column.addClass("regular"); //bold değeri regular olarak değişti
 				}
 			}
 		});

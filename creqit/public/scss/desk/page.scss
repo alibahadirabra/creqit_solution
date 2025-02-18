@@ -71,7 +71,7 @@
 	.page-body {
 		width: 100%;
 		//padding: 0px;
-		padding: 20px;//creqit.v1.sevval
+		padding: 24px;//creqit.v1.sevval
 	}
 }
 
@@ -80,19 +80,23 @@
 	padding: 0;
 	.btn {
 		height: var(--btn-height);
-		margin-left: var(--margin-sm, 8px);
+		//margin-left: var(--margin-sm, 8px);
+		margin-left: 16px;//creqit.v1.sevval//
 		border-radius: var(--border-radius);
 		line-height: 1;
-		padding: 4px 8px;
+		//padding: 4px 8px;
+		padding: 8px 10px;//creqit.v1.sevval//
 		&,
 		& .hidden-xs {
 			display: inline-flex;
 			align-items: center;
+			justify-content: center;//creqit.v1.sevval//
 			gap: 6px;
 		}
 	}
 	.btn:not(.icon-btn) {
-		padding: 4px 8px;
+		//padding: 4px 8px;
+		padding: 8px 10px;//creqit.v1.sevval//
 	}
 	.btn-primary,
 	.btn-secondary {
@@ -124,7 +128,8 @@
 	position: sticky;
 	top: var(--navbar-height);
 	background: var(--bg-color);
-	padding: 20px;//creqit.v1.sevval
+	//padding: 20px;//creqit.v1.sevval
+	padding: 20px 24px;//creqit.v1.sevval
 	border-radius: 12px 12px 0 0;
 	//border-bottom: 1px solid var(--border-color);//creqit.v1.sevval
 	transition: 0.5s top;
@@ -164,7 +169,8 @@
 	background-color: var(--card-bg);
 
 	.form-group {
-		padding: 0 10px 0 0;
+		//padding: 0 10px 0 0;
+		padding: 0 15px 0 0;//creqit.v1.sevval//
 		margin: 5px 0;
 	}
 	.checkbox {

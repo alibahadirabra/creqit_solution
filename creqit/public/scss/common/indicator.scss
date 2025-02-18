@@ -22,6 +22,7 @@ div.indicator-pill{
 	@include creqit-text(label, "s", "medium");//creqit.v1.sevval//
 	//padding: 4.5px 8px;
 	padding: 0;//creqit.v1.sevval//
+	font-weight: var(--weight-regular) !important;//creqit.v1.sevval//
 	border-radius: var(--border-radius-full);
 	height: 20px;
 	&:has(> span) {

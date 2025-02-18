@@ -249,6 +249,17 @@ creqit.ui.form.ControlData = class ControlData extends creqit.ui.form.ControlInp
 				</svg>
 			`);
 		}
+		if (this.df.fieldtype === "Datetime" || this.df.fieldtype === "Date" ) {
+			// SVG'yi bu input'un bulunduğu div'e ekleyelim
+			this.$wrapper.find(".control-input").append(`
+				<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M15.25 4H4.75C3.92157 4 3.25 4.67157 3.25 5.5V16C3.25 16.8284 3.92157 17.5 4.75 17.5H15.25C16.0784 17.5 16.75 16.8284 16.75 16V5.5C16.75 4.67157 16.0784 4 15.25 4Z" stroke="#818898" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+					<path d="M3.25 8.5H16.75" stroke="#818898" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+					<path d="M13 2.5V5.5" stroke="#818898" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+					<path d="M7 2.5V5.5" stroke="#818898" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+				</svg>
+			`);
+		}
 		//****************/
 	}
 	set_input(value) {

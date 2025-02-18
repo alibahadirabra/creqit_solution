@@ -122,6 +122,7 @@ $check-icon-dark: url("data:image/svg+xml, <svg viewBox='0 0 8 7' fill='none' xm
 	--text-on-pink: var(--pink-100);
 	--text-on-cyan: var(--cyan-100);
 	--dropdown-text: var(--text-muted);
+	--creqit-dropdown-active-bg: var(--creqit-dropdown-active);
 
 	// alert colors
 	--alert-text-danger: var(--red-300);
@@ -129,13 +130,13 @@ $check-icon-dark: url("data:image/svg+xml, <svg viewBox='0 0 8 7' fill='none' xm
 	--alert-text-info: var(--blue-300);
 	--alert-text-success: var(--green-300);
 
-	--alert-bg-danger: var(--creqit-dark-mode-white);
+	--alert-bg-danger: var(--creqit-dark-mode-grey);
 	--alert-bg-danger-boxshadow: var(--creqit-dark-mode-white-boxshadow);
-	--alert-bg-warning: var(--creqit-dark-mode-white);
+	--alert-bg-warning: var(--creqit-dark-mode-grey);
 	--alert-bg-warning-boxshadow: var(--creqit-dark-mode-white-boxshadow);
-	--alert-bg-info: var(--creqit-dark-mode-grey);
+	--alert-bg-info: var(--creqit-dark-mode-white);
 	--alert-bg-info-boxshadow: var(--creqit-dark-mode-grey-boxshadow);
-	--alert-bg-success: var(--creqit-dark-mode-grey);
+	--alert-bg-success: var(--creqit-dark-mode-white);
 	--alert-bg-success-boxshadow: var(--creqit-dark-mode-grey-boxshadow);
 	--creqit-text-color: var(--creqit-text-white);
 	--grid-head-text: var(--creqit-icon-subdued-400);
@@ -185,7 +186,7 @@ $check-icon-dark: url("data:image/svg+xml, <svg viewBox='0 0 8 7' fill='none' xm
 	--input-disabled: var(--creqit-dark-disabled);
 	--input-label: var(--creqit-input-label);
 	--input-hint: var(--creqit-input-label);
-
+	--input-boxshadow-focus-error: 0px 0px 0px 1px #DF1C41, 0px 0px 0px 3px rgba(223, 28, 65, 0.2392156863), 0px 1px 2px 0px rgba(150, 19, 44, 0.3215686275);
 
 	// checkbox
 	--checkbox-color: var(--neutral-white);
@@ -210,14 +211,20 @@ $check-icon-dark: url("data:image/svg+xml, <svg viewBox='0 0 8 7' fill='none' xm
 	--radio-focus: 0px 0px 0px 2px #FFFFFF,0px 0px 0px 3px #171B2680, 0px 0px 0px 1px #171B26, 0px 1px 2px 0px #171B2680;
 	--radio-checked: var(--creqit-neutral-solid-300);
 	--radio-checked-boxshadow: 0px 0px 0px 1px #171B2680, 0px 0px 0px 2px #FFFFFF, 0px 0px 0px 1px #171B26, 0px 1px 2px 0px #171B2680;
+	--checkbox-checked-disabled-border: var(--creqit-border-hover-100);
 
 	input[type="checkbox"] {
 		&:checked {
-			background-image: $check-icon-dark, var(--checkbox-gradient);
+			//background-image: $check-icon-dark, var(--checkbox-gradient);
+			background-image: url("data:image/svg+xml, <svg viewBox='0 0 8 7' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M1 4.00001L2.66667 5.80001L7 1.20001' stroke='white' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/></svg>");//creqit.v1.sevval//
+			background-color: var(--creqit-dark-checkbox);
+			box-shadow:  0px 0px 0px 2px #FFFFFF,0px 0px 0px 1px #C8C8C8,0px 0px 0px 3px #C8C8C880, 0px 1px 2px 0px #C8C8C880;			
 		}
 		&.disabled-selected,
 		&:disabled:checked {
-			background-image: $check-icon-dark, var(--checkbox-disabled-gradient);
+			//background-image: $check-icon-dark, var(--checkbox-disabled-gradient);
+			background-image: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.5 4.2L4.36364 7L10.5 1' stroke='%23C1C7D0' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");//creqit.v1.sevval//
+			background-color: var(--creqit-dark-checkbox-disabled);
 		}
 		&.disabled-deselected {
 			border: none;

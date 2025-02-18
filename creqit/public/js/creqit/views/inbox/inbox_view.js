@@ -76,8 +76,8 @@ creqit.views.InboxView = class InboxView extends creqit.views.ListView {
 	get_seen_class(doc) {
 		return Boolean(doc.seen) || JSON.parse(doc._seen || "[]").includes(creqit.session.user)
 			? ""
-			: "bold";
-	}
+			: "regular";
+		}//bold yerine regular verildi <<creqit.v1.sevval
 
 	get is_sent_emails() {
 		const f = this.filter_area.get().find((filter) => filter[1] === "sent_or_received");

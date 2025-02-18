@@ -75,7 +75,7 @@ select.form-control {
 	}
 	.search-icon {
 		position: absolute;
-		//top: 5px;
+		top: 38px;//creqit.v1.sevval//
 		left: 8px;
 	}
 }
@@ -204,18 +204,12 @@ select.form-control {
 .creqit-control:not([data-fieldtype="MultiSelectPills"]):not([data-fieldtype="Table MultiSelect"]) {
 	&.has-error {
 		input {
-			box-shadow: 0px 0px 0px 1px #DF1C41,
-			 0px 0px 0px 2px #FFFFFF,
-			 0px 0px 0px 3px #DF1C413D,
-			 0px 1px 2px 0px #96132C52 !important;//creqit.v1.sevval//
-			//border: 1px solid var(--error-border);
+			box-shadow: var(--input-boxshadow-focus-error) !important;//creqit.v1.sevval//
+			 //border: 1px solid var(--error-border);
 
 			&:focus {
 				//box-shadow: 0 0 0 $input-btn-focus-width var(--error-bg);
-				box-shadow: 0px 0px 0px 1px #DF1C41,
-					0px 0px 0px 2px #FFFFFF,
-					0px 0px 0px 3px #DF1C413D,
-					0px 1px 2px 0px #96132C52 !important;//creqit.v1.sevval//
+				box-shadow: var(--input-boxshadow-focus-error) !important;//creqit.v1.sevval//
 			}
 		}
 		//creqit.v1.sevval//
@@ -234,10 +228,7 @@ select.form-control {
 	&.has-error {
 		.control-input {
 			//border: 1px solid var(--error-border);
-			box-shadow: 0px 0px 0px 1px #DF1C41,
-					0px 0px 0px 2px #FFFFFF,
-					0px 0px 0px 3px #DF1C413D,
-					0px 1px 2px 0px #96132C52 !important;//creqit.v1.sevval//
+			box-shadow: var(--input-boxshadow-focus-error) !important;//creqit.v1.sevval//
 			border-radius: var(--border-radius);
 		}
 		//creqit.v1.sevval//
@@ -415,6 +406,19 @@ textarea.form-control {
 		top: 11px;//creqit.v1.sevval//
 	}
 }
+.creqit-control[data-fieldtype=Datetime],
+.creqit-control[data-fieldtype=Date] {
+	.control-input{
+		input {
+			padding-left: 33px;
+		}
+		svg {
+			position: absolute;
+			left: 9px;
+			top: 36px;//creqit.v1.sevval//
+		}
+	}
+}//creqit.v1.sevval//
 // .creqit-control[data-fieldtype=Check]{
 // 	.input-area input{
 // 		@include creqit-text(label, "s", "medium");

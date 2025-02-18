@@ -54,7 +54,8 @@ input[type="checkbox"] {
 		//border: 0.5px solid var(--dark-border-color);
 		pointer-events: none;
 		background-color: var(--checkbox-checked-disabled) !important;	//creqit.v1.sevval//
-		border: 1px solid var(--creqit-background-pressed-100) !important;//creqit.v1.sevval//
+		//border: 1px solid var(--creqit-background-pressed-100) !important;//creqit.v1.sevval//
+		border: 1px solid var(--checkbox-checked-disabled-border) !important;//creqit.v1.sevval//
 	}
 
 	&.disabled-selected,

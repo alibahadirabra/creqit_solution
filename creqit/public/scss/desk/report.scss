@@ -6,7 +6,8 @@
 
 	.page-form {
 		.form-group {
-			padding: 0px var(--padding-sm);
+			//padding: 0px var(--padding-sm);
+			padding: 0px var(--padding-md) 0 0;//creqit.v1.sevval//
 			margin: var(--margin-sm) 0px;
 		}
 	}
@@ -90,20 +91,21 @@
 	border-radius: 10px;//creqit.v1.sevval
 }
 
-.report-view {
-	width: calc(100% - 220px);
-	.result {
-		.dt-row:last-child:not(.dt-row-filter) {
-			.dt-cell {
-				border-bottom: 1px solid var(--border-color);
-			}
-		}
-	}
-}
+// .report-view {
+// 	width: calc(100% - 220px);
+// 	.result {
+// 		.dt-row:last-child:not(.dt-row-filter) {
+// 			.dt-cell {
+// 				border-bottom: 1px solid var(--border-color);
+// 			}
+// 		}
+// 	}
+// }
 
 .group-by-button {
-	margin: 5px;
-}
+	//margin: 5px;
+	margin: var(--margin-xs) 0 var(--margin-xs) var(--margin-md);
+}//creqit.v1.sevval//
 .group-by-icon.active {
 	--icon-stroke: var(--primary);
 }
@@ -121,6 +123,7 @@
 	min-width: 500px;
 	min-height: 50px;
 	@include get_textstyle("base", "regular");
+	border: 1px solid var(--border-color);//creqit.v1.sevval//
 
 	.group-by-box {
 		padding: var(--margin-xs) var(--margin-md) var(--margin-xs) 0;
