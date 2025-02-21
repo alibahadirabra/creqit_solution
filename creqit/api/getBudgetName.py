@@ -1,7 +1,7 @@
 
 import creqit
 from creqit import _
-@creqit.whitelist()
+@creqit.whitelist(allow_guest=True)
 def get_distinct_budget_names(doctype, txt, searchfield, start, page_len, filters):
     # Create Budget'dan distinct budget_name'leri çekiyoruz
     return creqit.db.sql("""
