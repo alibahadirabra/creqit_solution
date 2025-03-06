@@ -118,7 +118,9 @@
 .form-section.card-section{
 	border-bottom: 1px solid var(--border-color);//creqit.v1.sevval
 }
-
+.form-section.card-section:last-child{
+	border-bottom: none;//creqit.v1.sevval
+}
 .form-section.card-section.hide-border {
 	border-bottom: none;
 }

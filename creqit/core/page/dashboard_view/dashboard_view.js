@@ -11,6 +11,21 @@ creqit.pages["dashboard-view"].on_page_load = function (wrapper) {
 		single_column: true,
 	});
 
+	$(document).ready(function() {
+        // data-route'ı doğru bir şekilde almak için body elementinin yüklendiğinden emin olun
+        const dataRoute = document.body.getAttribute("data-route");
+        // Eğer data-route varsa ve dashboard-view ile başlıyorsa
+        if (dataRoute && dataRoute.startsWith("dashboard-view")) {
+            // Eğer kullanıcı Administrator değilse menüyü gizle
+            if (!creqit.user.has_role("Administrator")) {
+                const menuBtnGroup = document.querySelector(".menu-btn-group");
+                if (menuBtnGroup) {
+                    menuBtnGroup.style.display = "none";
+                }
+            }
+        }
+    });//gösterge paneli menu button <<creqit.v1.sevval 
+
 	creqit.dashboard = new Dashboard(wrapper);
 	$(wrapper).bind("show", function () {
 		creqit.dashboard.show();

@@ -31518,7 +31518,7 @@ msgstr "{0} bulunamadı"
 #: creqit/core/doctype/report/report.py:417
 #: creqit/public/js/creqit/list/list_view.js:1027
 msgid "{0} of {1}"
-msgstr "{0}/{1} Kayıt Listeleniyor"
+msgstr "{0} / {1}"
 
 #: creqit/public/js/creqit/list/list_view.js:1029
 msgid "{0} of {1} ({2} rows with children)"

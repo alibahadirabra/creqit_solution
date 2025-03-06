@@ -16,8 +16,8 @@ creqit.ui.form.ControlComment = class ControlComment extends creqit.ui.form.Cont
 
 					<div class="form-stats-likes">
 						<span class="liked-by like-action d-flex align-items-center">
-							<svg class="icon icon-sm like-icon">
-								<use href="#icon-flag"></use>
+							<svg class="icon icon-lg like-icon">
+								<use href="#icon-flag-traquent"></use>
 							</svg>
 							<span class="like-count ml-2"></span>
 						</span>
@@ -33,7 +33,7 @@ creqit.ui.form.ControlComment = class ControlComment extends creqit.ui.form.Cont
 			</div>
 		`)
 			: $('<div class="creqit-control"></div>');
-		//icon-heart icon-flag olarak değişti  <<sevval
+		//icon-heart icon-flag-traquent olarak değişti  <<sevval
 		this.comment_wrapper.appendTo(this.parent);
 
 		// wrapper should point to creqit-control

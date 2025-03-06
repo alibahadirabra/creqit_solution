@@ -84,6 +84,9 @@
 		//border-bottom: none;
 		border-radius: 0 0 10px 10px;//creqit.v1.sevval
 	}
+	&:hover{
+		background-color: var(--highlight-color);
+	}
 }
 
 .list-row {
@@ -437,6 +440,18 @@ input.list-header-checkbox {
 	.filter-section {
 		display: flex;
 		padding: 0 var(--padding-xs);
+	}
+	.btn-group {
+		box-shadow: var(--btn-default-boxshadow);
+    	border-radius: 8px;
+		.btn {
+			box-shadow: none !important;
+		}
+		.btn-default:first-child{
+			&:active, &:focus, &:hover{
+				border-right: 1px solid var(--btn-group-border-color);
+			}
+		}
 	}
 
 	.filter-selector .btn-group {

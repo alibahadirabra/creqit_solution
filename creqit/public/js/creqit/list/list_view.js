@@ -8,6 +8,24 @@ creqit.views.ListView = class ListView extends creqit.views.BaseList {
 		const route = creqit.get_route();
 		const doctype = route[1];
 
+		$(document).ready(function() {
+			// data-route'ı doğru bir şekilde almak için body elementinin yüklendiğinden emin olun
+			if (route[0] === "List") {
+				// Eğer kullanıcı Administrator değilse menüyü gizle
+				if (!creqit.user.has_role("Administrator")) {
+					const menuBtnGroup = document.querySelector(".menu-btn-group");
+					// Ul öğesi boş mu kontrol et
+					const menuItems = menuBtnGroup ? menuBtnGroup.querySelector("ul.dropdown-menu") : null;
+					setTimeout(() => {
+						if (menuItems && menuItems.querySelectorAll("li").length === 2) {
+							// Eğer ul öğesi tamamen boşsa, menü butonunu gizle
+							menuBtnGroup.style.display = "none";
+						}
+					}, 100); 
+				}
+			}
+		});//listede menu button içeriği boşsa buton gizleniyor <<creqit.v1.sevval 
+
 		if (route.length === 2) {
 			const user_settings = creqit.get_user_settings(doctype);
 			const last_view = user_settings.last_view;

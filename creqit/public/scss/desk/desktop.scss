@@ -198,9 +198,10 @@ body {
 
 		.filter-chart {
 			background-color: var(--control-bg);
+			border: 1px solid var(--control-bg);//creqit.v1.sevval//
 			&.btn svg{
 				position: relative;
-				top: 7px;
+				top: 3px;//creqit.v1.sevval//
 			}//creqit.v1.sevval//
 		}
 
@@ -208,7 +209,7 @@ body {
 			box-shadow: none;
 			min-width: max-content;
 			font-size: 12px;
-			padding: 8px 6px; //creqit.v1.sevval//
+			//padding: 8px 6px; //creqit.v1.sevval//
 		}
 
 		.chart-actions {

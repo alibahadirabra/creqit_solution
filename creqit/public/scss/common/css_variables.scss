@@ -178,8 +178,8 @@ $disabled-input-height: 40px;//22px;
 	// Other Colors
 	--sidebar-select-color: var(--gray-100);
 
-	--scrollbar-thumb-color: var(--gray-400);
-	--scrollbar-track-color: var(--gray-200);
+	--scrollbar-thumb-color: var(--stroke-soft);
+	--scrollbar-track-color: var(--creqit-background-white);
 
 	--shadow-inset: inset 0px -1px 0px var(--gray-300);
 	--border-color: var(--stroke-soft);
@@ -188,7 +188,7 @@ $disabled-input-height: 40px;//22px;
 	--creqit-divider: var(--creqit-divider-color);//creqit.v1.sevval//
 	--dark-border-color: var(--gray-300);
 	--table-border-color: var(--stroke-soft);
-	--highlight-color: var(--gray-50);
+	--highlight-color: #F8FAFB;
 	--yellow-highlight-color: var(--yellow-50);
 
 	--btn-group-border-color: var(--gray-300);
