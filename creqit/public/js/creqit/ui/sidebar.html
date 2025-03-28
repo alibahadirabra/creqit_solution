@@ -72,7 +72,7 @@
 										{%= __(item.item_label) %}
 									</a>
 								{% } else if (item.action) { %}
-									<button class="btn-reset dropdown-item" onclick="return {{ item.action }}">
+									<button class="btn-reset dropdown-item btn-action" onclick="return {{ item.action }}">
 										{%= __(item.item_label) %}
 									</button>
 								{% } else { %}

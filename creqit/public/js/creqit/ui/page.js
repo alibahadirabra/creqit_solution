@@ -518,7 +518,7 @@ creqit.ui.Page = class Page {
 		} else {
 			this.divider = parent.find(".dropdown-divider.user-action");
 			if (!this.divider.length) {
-				this.divider = $('<li class="dropdown-divider user-action"></li>').prependTo(
+				this.divider = $('<li class="dropdown-divider user-action visible-xs"></li>').prependTo(
 					parent
 				);
 			}

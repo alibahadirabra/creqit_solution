@@ -31,7 +31,7 @@
 .form-dashboard-section {
 	.form-section-description {
 		max-width: var(--page-max-width);
-		margin: auto;
+		//margin: auto;//creqit.v1.sevval
 		margin-bottom: 10px;
 		@include get_textstyle("base", "regular");
 		color: var(--text-light);
@@ -193,6 +193,11 @@
 				border: 1px solid var(--border-color);
 				min-height: 24px;
 				padding: 6px;
+				&:focus{
+					background: var(--input-bg) !important;
+					border: none !important;
+					box-shadow: var(--input-boxshadow-focus) !important;
+				}
 			}
 		}
 	}

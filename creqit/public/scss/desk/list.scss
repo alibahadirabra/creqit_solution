@@ -425,7 +425,14 @@ input.list-header-checkbox {
 	font-size: 11px;
 	color: $text-muted;
 }
-
+[data-route="List/Lead/List"],
+[data-route="List/Customer/List"]{
+	.standard-filter-section {
+		div[data-fieldname="full_name"] {
+			min-width: 250px !important;
+		}
+	}
+}
 .page-form {
 	.standard-filter-section {
 		flex-wrap: wrap;

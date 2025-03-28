@@ -89,16 +89,17 @@
 			box-shadow: 2px 4px 3px 0px #00000005 !important;
 		}
 		input:focus {
-			border-bottom-left-radius: 0;
-			border-bottom-right-radius: 0;
+			//border-bottom-left-radius: 0;//creqit.v1.sevval
+			//border-bottom-right-radius: 0;//creqit.v1.sevval
 			box-shadow: var(--input-focus);
 			background-color: var(--awesomebar-focus-bg);
 			box-shadow: var(--input-boxshadow-focus) !important;//creqit.v1.sevval
 		}
 		ul {
 			border: none;
+			margin-top: 6px;//creqit.v1.sevval
 			border-top: 1px solid var(--border-color);
-			border-radius: 0 0 var(--border-radius) var(--border-radius);
+			border-radius: var(--border-radius);//creqit.v1.sevval
 			box-shadow: var(--awesomebar-shadow);
 		}
 		input::placeholder {

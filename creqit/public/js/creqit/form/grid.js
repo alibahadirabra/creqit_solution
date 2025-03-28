@@ -78,7 +78,7 @@ export default class Grid {
 					</div>
 				</div>
 				<div class="small form-clickable-section grid-footer">
-					<div class="flex justify-between">
+					<div class="flex justify-content-end">
 						<div class="grid-buttons">
 							<button type="button" class="btn btn-xs btn-danger grid-remove-rows hidden"
 								data-action="delete_rows">

@@ -72,7 +72,8 @@ creqit.search.AwesomeBar = class AwesomeBar {
 
 				me.options = [];
 
-				if (txt && txt.length > 1) {
+				//1 den 3 çıkarıldı harf sayısı creqit.v1.sevval
+				if (txt && txt.length > 3) {
 					if (last_space !== -1) {
 						me.set_specifics(txt.slice(0, last_space), txt.slice(last_space + 1));
 					}
@@ -145,50 +146,68 @@ creqit.search.AwesomeBar = class AwesomeBar {
 	}
 
 	add_help() {
-		this.options = this.options.filter(item => {
-			return typeof item.route === 'string' && !item.route.startsWith('Workspaces');
-		});//creqit.v1.sevval //ilk listede workspace ekranları gelmesin diye eklendi
-		this.options.push({
-			value: __("Help on Search"),
-			index: -10,
-			default: "Help",
-			onclick: function () {
-				var txt =
-				// 	'<table class="table table-bordered">\
-				// 	<tr><td style="width: 50%">' +
-				// 	__("Create a new record") +
-				// 	"</td><td>" +
-				// 	__("new type of document") +
-				// 	"</td></tr>\
-				// 	<tr><td>" +
-				// 	__("List a document type") +
-				// 	"</td><td>" +
-				// 	__("document type..., e.g. customer") +
-				// 	"</td></tr>\
-				// 	<tr><td>" +
-				// 	__("Search in a document type") +
-				// 	"</td><td>" +
-				// 	__("text in document type") +
-				// 	"</td></tr>\
-				// 	<tr><td>" +
-				// 	__("Tags") +
-				// 	"</td><td>" +
-				// 	__("tag name..., e.g. #tag") +
-				// 	"</td></tr>\
-				// 	<tr><td>" +
-				// 	__("Open a module or tool") +
-				// 	"</td><td>" +
-				// 	__("module name...") +
-				// 	"</td></tr>\
-				// 	<tr><td>" +
-				// 	__("Calculate") +
-				// 	"</td><td>" +
-				// 	__("e.g. (55 + 434) / 4 or =Math.sin(Math.PI/2)...") +
-				// 	"</td></tr>\
-				// </table>";
-				creqit.msgprint(txt, __("Search Help"));
-			},
-		});
+		// this.options = this.options.filter(item => {
+		// 	return typeof item.route === 'string' && !item.route.startsWith('Workspaces');
+		// });//creqit.v1.sevval //ilk listede workspace ekranları gelmesin diye eklendi
+		
+		if (creqit.session.user !== "Administrator") {
+			const keywordsToShow = ["targeting", "key result", "create budget", "approval processes", "expense request", 
+				"income recognition", "budget item", "department item", "chart", "period item", "sub-budget item", 
+				"currency item", "budget distribution", "exchange rate", "new budget", "supplier", "mahalle", "il", "ilce",
+				"budgetaddress", "company definition", "activity item", "company officials", "period item select", 
+				"email account", "scripted message", "contracts", "activity log", "view log"
+			];
+			this.options = this.options.filter(item => {
+				return keywordsToShow.some(keyword => {
+					const regex = new RegExp(`\\b${keyword}\\b`, 'i'); // 'i' flag means case-insensitive
+					return (
+						(typeof item.match === 'string' && regex.test(item.match)) ||
+						(typeof item.value === 'string' && regex.test(item.value))
+					);
+				});
+			});
+		}
+		// this.options.push({
+		// 	value: __("Help on Search"),
+		// 	index: -10,
+		// 	default: "Help",
+		// 	onclick: function () {
+		// 		var txt =
+		// 		// 	'<table class="table table-bordered">\
+		// 		// 	<tr><td style="width: 50%">' +
+		// 		// 	__("Create a new record") +
+		// 		// 	"</td><td>" +
+		// 		// 	__("new type of document") +
+		// 		// 	"</td></tr>\
+		// 		// 	<tr><td>" +
+		// 		// 	__("List a document type") +
+		// 		// 	"</td><td>" +
+		// 		// 	__("document type..., e.g. customer") +
+		// 		// 	"</td></tr>\
+		// 		// 	<tr><td>" +
+		// 		// 	__("Search in a document type") +
+		// 		// 	"</td><td>" +
+		// 		// 	__("text in document type") +
+		// 		// 	"</td></tr>\
+		// 		// 	<tr><td>" +
+		// 		// 	__("Tags") +
+		// 		// 	"</td><td>" +
+		// 		// 	__("tag name..., e.g. #tag") +
+		// 		// 	"</td></tr>\
+		// 		// 	<tr><td>" +
+		// 		// 	__("Open a module or tool") +
+		// 		// 	"</td><td>" +
+		// 		// 	__("module name...") +
+		// 		// 	"</td></tr>\
+		// 		// 	<tr><td>" +
+		// 		// 	__("Calculate") +
+		// 		// 	"</td><td>" +
+		// 		// 	__("e.g. (55 + 434) / 4 or =Math.sin(Math.PI/2)...") +
+		// 		// 	"</td></tr>\
+		// 		// </table>";
+		// 		creqit.msgprint(txt, __("Search Help"));
+		// 	},
+		// });
 	}
 
 	set_specifics(txt, end_txt) {
@@ -236,10 +255,13 @@ creqit.search.AwesomeBar = class AwesomeBar {
 				"email account", "scripted message", "contracts", "activity log", "view log"
 			];
 			options = options.filter(item => {
-				return keywordsToShow.some(keyword => 
-					(typeof item.match === 'string' && item.match.toLowerCase().includes(keyword.toLowerCase())) ||
-					(typeof item.value === 'string' && item.value.toLowerCase().includes(keyword.toLowerCase()))
-				);
+				return keywordsToShow.some(keyword => {
+					const regex = new RegExp(`\\b${keyword}\\b`, 'i'); // 'i' flag means case-insensitive
+					return (
+						(typeof item.match === 'string' && regex.test(item.match)) ||
+						(typeof item.value === 'string' && regex.test(item.value))
+					);
+				});
 			});
 		}
 
@@ -337,26 +359,28 @@ creqit.search.AwesomeBar = class AwesomeBar {
 	}
 
 	make_search_in_current(txt) {
-		var route = creqit.get_route();
-		if (route[0] === "List" && txt.indexOf(" in") === -1) {
-			// search in title field
-			const doctype = creqit.container.page?.list_view?.doctype;
-			if (!doctype) return;
-			var meta = creqit.get_meta(doctype);
-			var search_field = meta.title_field || "name";
-			var options = {};
-			options[search_field] = ["like", "%" + txt + "%"];
-			this.options.push({
-				label: __("Find {0} in {1}", [txt.bold(), __(route[1]).bold()]),
-				value: __("Find {0} in {1}", [txt, __(route[1])]),
-				route_options: options,
-				onclick: function () {
-					cur_list.show();
-				},
-				index: 90,
-				default: "Current",
-				match: txt,
-			});
+		if(creqit.session.user === "Administrator"){
+			var route = creqit.get_route();
+			if (route[0] === "List" && txt.indexOf(" in") === -1) {
+				// search in title field
+				const doctype = creqit.container.page?.list_view?.doctype;
+				if (!doctype) return;
+				var meta = creqit.get_meta(doctype);
+				var search_field = meta.title_field || "name";
+				var options = {};
+				options[search_field] = ["like", "%" + txt + "%"];
+				this.options.push({
+					label: __("Find {0} in {1}", [txt.bold(), __(route[1]).bold()]),
+					value: __("Find {0} in {1}", [txt, __(route[1])]),
+					route_options: options,
+					onclick: function () {
+						cur_list.show();
+					},
+					index: 90,
+					default: "Current",
+					match: txt,
+				});
+			}
 		}
 	}
 
