@@ -9166,6 +9166,10 @@ msgstr "Şifreleme anahtarı geçersiz formatta!"
 msgid "Encryption key is invalid! Please check site_config.json"
 msgstr "Şifreleme anahtarı geçersiz! Lütfen site_config.json dosyasını kontrol edin."
 
+#: traquent/utils/password.py:206
+msgid "Email address not registered"
+msgstr "Email adresi kayıtlı değil"
+
 #. Label of the end_date (Date) field in DocType 'Auto Repeat'
 #. Label of the end_date (Date) field in DocType 'Audit Trail'
 #. Label of the end_date (Datetime) field in DocType 'Web Page'

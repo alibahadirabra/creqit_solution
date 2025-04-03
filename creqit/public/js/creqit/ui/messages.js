@@ -27,8 +27,10 @@ creqit.throw = function (msg) {
 };
 
 creqit.confirm = function (message, confirm_action, reject_action) {
+	var title_text = __("Confirm", null, "Title of confirmation dialog");
+
 	var d = new creqit.ui.Dialog({
-		title: __("Confirm", null, "Title of confirmation dialog"),
+		//title: title_text,
 		primary_action_label: __("Yes", null, "Approve confirmation dialog"),
 		primary_action: () => {
 			confirm_action && confirm_action();
@@ -38,7 +40,17 @@ creqit.confirm = function (message, confirm_action, reject_action) {
 		secondary_action: () => d.hide(),
 	});
 
-	d.$body.append(`<p class="creqit-confirm-message">${message}</p>`);
+	//d.$body.append(`<p class="creqit-confirm-message">${message}</p>`);
+	d.$body.append(`
+        <div style="text-align: center;">
+			<svg width="89" height="89" viewBox="0 0 89 89" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<rect x="0.5" y="0.5" width="88" height="88" rx="44" fill="#EFFAF6"/>
+				<path d="M38.9116 53.2071L62.6161 29.5L66.2652 33.1465L38.9116 60.5L22.5 44.0884L26.1465 40.4419L38.9116 53.2071Z" fill="#38C793"/>
+			</svg>
+			<h4 style="margin-top: 24px;">${title_text}</h4> 
+            <p class="creqit-confirm-message">${message}</p>
+        </div>
+    `);
 	d.show();
 
 	// flag, used to bind "okay" on enter
@@ -58,7 +70,7 @@ creqit.confirm = function (message, confirm_action, reject_action) {
 
 creqit.warn = function (title, message_html, proceed_action, primary_label, is_minimizable) {
 	const d = new creqit.ui.Dialog({
-		title: title,
+		//title: title,
 		indicator: "red",
 		primary_action_label: primary_label,
 		primary_action: () => {
@@ -70,7 +82,17 @@ creqit.warn = function (title, message_html, proceed_action, primary_label, is_m
 		minimizable: is_minimizable,
 	});
 
-	d.$body.append(`<div class="creqit-confirm-message">${message_html}</div>`);
+	//d.$body.append(`<div class="creqit-confirm-message">${message_html}</div>`);
+	d.$body.append(`
+        <div style="text-align: center;">
+			<svg width="89" height="89" viewBox="0 0 89 89" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<rect x="0.5" y="0.5" width="88" height="88" rx="44" fill="#FEF3EB"/>
+				<path d="M54.4404 20.5025L68.5 34.5596V54.4404L54.4404 68.5H34.5596L20.5 54.4404V34.5596L34.5596 20.5H54.4404V20.5025ZM41.5312 51.4271V56.3751H46.4792V51.4271H41.5312ZM41.5312 31.6353V46.4792H46.4792V31.6353H41.5312Z" fill="#F17B2C"/>
+			</svg>
+			<h4 style="margin-top: 24px;">${title}</h4> 
+            <p class="creqit-confirm-message">${message_html}</p>
+        </div>
+    `);
 	d.standard_actions.find(".btn-primary").removeClass("btn-primary").addClass("btn-danger");
 
 	d.show();

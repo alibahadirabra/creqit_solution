@@ -192,16 +192,19 @@ def decrypt(txt, encryption_key=None, key: str | None = None):
 	except InvalidToken:
 		# encryption_key in site_config is changed and not valid
 		creqit.throw(
-			(_("Failed to decrypt key {0}").format(key) + "<br><br>" if key else "")
-			+ _("Encryption key is invalid! Please check site_config.json")
-			+ "<br><br>"
-			+ _(
-				"If you have recently restored the site you may need to copy the site config contaning original Encryption Key."
+			# (_("Failed to decrypt key {0}").format(key) + "<br><br>" if key else "")
+			# + _("Encryption key is invalid! Please check site_config.json")
+			# + "<br><br>"
+			# + _(
+			# 	"If you have recently restored the site you may need to copy the site config contaning original Encryption Key."
+			# )
+			# + "<br><br>"
+			# + _(
+			# 	"Please visit https://creqitcloud.com/docs/sites/migrate-an-existing-site#encryption-key for more information."
+			# ),
+			_(
+			 	"Email address not registered"
 			)
-			+ "<br><br>"
-			+ _(
-				"Please visit https://creqitcloud.com/docs/sites/migrate-an-existing-site#encryption-key for more information."
-			),
 		)
 
 
