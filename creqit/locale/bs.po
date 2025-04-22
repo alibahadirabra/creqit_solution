@@ -24771,8 +24771,8 @@ msgid "Started At"
 msgstr "Počelo u"
 
 #: creqit/desk/page/setup_wizard/setup_wizard.js:274
-msgid "Starting Creinda ..."
-msgstr "Pokrže se Creinda..."
+msgid "Starting Creqit ..."
+msgstr "Pokrže se Creqit..."
 
 #. Label of the starts_on (Datetime) field in DocType 'Event'
 #: creqit/desk/doctype/event/event.json

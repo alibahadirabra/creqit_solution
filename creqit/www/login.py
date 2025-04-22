@@ -136,7 +136,7 @@ def send_login_link(email: str):
 	link = _generate_temporary_login_link(email, expiry)
 
 	app_name = (
-		creqit.get_website_settings("app_name") or creqit.get_system_settings("app_name") or _("Creinda")
+		creqit.get_website_settings("app_name") or creqit.get_system_settings("app_name") or _("Creqit")
 	)
 
 	subject = _("Login To {0}").format(app_name)

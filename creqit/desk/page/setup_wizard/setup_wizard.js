@@ -271,7 +271,7 @@ creqit.setup.SetupWizard = class SetupWizard extends creqit.ui.Slides {
 
 		this.$working_state = this.get_message(
 			__("Setting up your system"),
-			__("Starting Creinda ...")
+			__("Starting Creqit ...")
 		).appendTo(this.parent);
 
 		this.attach_abort_button();

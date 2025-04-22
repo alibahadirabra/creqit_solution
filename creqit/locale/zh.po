@@ -24553,7 +24553,7 @@ msgid "Started At"
 msgstr ""
 
 #: creqit/desk/page/setup_wizard/setup_wizard.js:274
-msgid "Starting Creinda ..."
+msgid "Starting Creqit ..."
 msgstr ""
 
 #. Label of the starts_on (Datetime) field in DocType 'Event'

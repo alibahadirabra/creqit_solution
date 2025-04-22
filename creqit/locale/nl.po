@@ -29175,8 +29175,8 @@ msgid "Started At"
 msgstr ""
 
 #: desk/page/setup_wizard/setup_wizard.js:274
-msgid "Starting Creinda ..."
-msgstr "Creinda starten ..."
+msgid "Starting Creqit ..."
+msgstr "Creqit starten ..."
 
 #. Label of a Datetime field in DocType 'Event'
 #: desk/doctype/event/event.json
