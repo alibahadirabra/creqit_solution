@@ -28,7 +28,7 @@ def check_license(license_number, app_number):
     customer_modules = creqit.get_all("CustomerModule",
         filters={
             "customer": customer_name,
-            "is_active": 1,
+            "isactive": 1,
             "start_date": ["<=", today],
             "end_date": [">=", today]
         },
