@@ -1,7 +1,7 @@
 import creqit
 from creqit import _
-from datetime import date
-
+from datetime import date 
+ 
 @creqit.whitelist(allow_guest=True)
 def check_license(license_number, app_number):
     today = date.today()
