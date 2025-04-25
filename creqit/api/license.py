@@ -1,7 +1,7 @@
 import creqit
 from creqit import _
-from datetime import date 
- 
+from datetime import date
+
 @creqit.whitelist(allow_guest=True)
 def check_license(license_number, app_number):
     today = date.today()
@@ -10,15 +10,17 @@ def check_license(license_number, app_number):
         filters={
             "license_number": license_number,
             "app_number": app_number,
-            "is_active": 1
+            "is_active": 1,
+            "start_date": ["<=", today],
+            "end_date": [">=", today]
         },
-        fields=["name", "customer_name", "max_user_count"]
+        fields=["name", "customer_name", "max_user_count", "start_date", "end_date"]
     )
 
     if not customer:
         return {
             "valid": False,
-            "message": "Geçerli bir lisans bulunamadı."
+            "message": "Geçerli bir lisans bulunamadı ya da lisans süresi geçmiş."
         }
 
     customer_name = customer[0].name
