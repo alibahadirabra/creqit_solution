@@ -578,7 +578,14 @@ persistent_cache_keys = [
 	"recorder-*",  # Recorder
 	"global_search_queue",
 ]
-
+doc_events = {
+    "Leads": {
+        "on_update": "creqit.sync_contacts.sync_table_orgl"
+    },
+    "Opportunity": {
+        "on_update": "creqit.sync_contacts.sync_table_orgl"
+    }
+}
  
 
  
