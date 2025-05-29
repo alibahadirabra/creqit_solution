@@ -2,7 +2,7 @@ import creqit
 from creqit import _
 
 @creqit.whitelist()
-def get_contacts_by_company(company):
+def get_contacts_by_company(contact_name=None, company=None):
     if not company:
         return []
 
