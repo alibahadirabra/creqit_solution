@@ -11,7 +11,7 @@ def get_contacts_by_company(contact_name=None, company=None):
     else:
         return []
 
-    contacts = creqit.get_all("Contact_Crm_Child",
+    contacts = creqit.get_all("Contact_CRM",
         filters=filters,
         fields=["name", "name_surname", "title", "linkaccount", "department", "email", "phone", "mobilephone", "fax", "lastactivity"]
     )
