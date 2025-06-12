@@ -75,6 +75,39 @@ creqit.ui.Sidebar = class Sidebar {
 			// });
 		}
 
+		// Sayfa yüklendiğinde, localStorage'dan 'sidebarActive' durumunu kontrol etAdd commentMore actions
+		setTimeout(() => {
+			const sidebar = document.querySelector('.body-sidebar-container');
+			const toggleButton = document.querySelector('.sidebar-toggle-button');
+		
+			if (!sidebar || !toggleButton) {
+				console.error('Sidebar veya toggleButton bulunamadı!');
+				return;
+			}
+		
+			// Sayfa yenilendiğinde 'active' durumunu kontrol et
+			if (localStorage.getItem('sidebarActive') === 'true') {
+				sidebar.classList.add('active');
+				toggleButton.textContent = '<';  // Sidebar açıkken < göster
+			} else {
+				toggleButton.textContent = '>';  // Sidebar kapalıyken > göster
+			}
+		
+			// Sidebar'ı açma ve kapama işlemi
+			toggleButton.addEventListener('click', () => {
+				sidebar.classList.toggle('active');  // active sınıfını toggle ediyoruz
+		
+				// Sidebar aktif durumu localStorage'a kaydediliyor
+				if (sidebar.classList.contains('active')) {
+					localStorage.setItem('sidebarActive', 'true');
+					toggleButton.textContent = '<';  // Sidebar açıldığında < simgesini göster
+				} else {
+					localStorage.setItem('sidebarActive', 'false');
+					toggleButton.textContent = '>';  // Sidebar kapandığında > simgesini göster
+				}
+			});
+		}, 100); 
+		
 		this.setup_app_switcher();
 		this.dropdownListUser();
 		let user_avatar = creqit.avatar(creqit.session.user, "avatar-icon");

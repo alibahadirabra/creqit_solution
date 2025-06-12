@@ -108,7 +108,8 @@
 		border-radius: 5px;
 		position: absolute;
 		top: 12px;
-		left: 8px;
+		//left: 8px;
+		top: 11px; //creqit.v1.sevval
 		content: " ";
 		&.no-value {
 			background: url("/assets/creqit/images/color-circle.png");
