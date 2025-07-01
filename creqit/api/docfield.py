@@ -16,7 +16,7 @@ def manage_docfield(action, **kwargs):
         fieldname = kwargs.get("fieldname")
 
         if action == "insert":
-            # Aynı parent ve fieldname ile kayıt var mı kontrol et
+            # Aynı parent ve fieldname ile kayıt var mı kontrol ediyorum AliBK
             existing = creqit.db.exists("DocField", {"parent": parent, "fieldname": fieldname})
             if existing:
                 return {"status": "error", "message": f"Field '{fieldname}' already exists in {parent}."}
@@ -53,8 +53,8 @@ def manage_docfield(action, **kwargs):
                         doc.set(column, value)
 
             doc.insert(ignore_permissions=True)
-            creqit.db.commit()
-            creqit.clear_cache(doctype=parent)
+            creqit.db.commit() #bu olmazsa işlem başarılı oluyor ama db ye kaydetmiyor temp te kalıyor. AliBK
+            creqit.clear_cache(doctype=parent) #Cache temizlemek mevcuttaki değişikliğin yansıması için önemli. AliBK
             return {"status": "success", "message": f"Field '{fieldname}' inserted into {parent}."}
 
         elif action == "update":
