@@ -16,6 +16,11 @@ def manage_docfield(action, **kwargs):
         fieldname = kwargs.get("fieldname")
 
         if action == "insert":
+            # Aynı parent ve fieldname ile kayıt var mı kontrol et
+            existing = creqit.db.exists("DocField", {"parent": parent, "fieldname": fieldname})
+            if existing:
+                return {"status": "error", "message": f"Field '{fieldname}' already exists in {parent}."}
+
             idx = creqit.db.count("DocField", {"parent": parent}) + 1
 
             doc = creqit.get_doc({
@@ -48,7 +53,7 @@ def manage_docfield(action, **kwargs):
                         doc.set(column, value)
 
             doc.insert(ignore_permissions=True)
-            creqit.db.commit()  # Commit eklendi
+            creqit.db.commit()
             creqit.clear_cache(doctype=parent)
             return {"status": "success", "message": f"Field '{fieldname}' inserted into {parent}."}
 
@@ -61,14 +66,14 @@ def manage_docfield(action, **kwargs):
                     except:
                         doc.set(key, val)
             doc.save(ignore_permissions=True)
-            creqit.db.commit()  # Commit eklendi
+            creqit.db.commit()
             creqit.clear_cache(doctype=parent)
             return {"status": "success", "message": f"Field '{fieldname}' updated in {parent}."}
 
         elif action == "delete":
             doc = creqit.get_doc("DocField", {"parent": parent, "fieldname": fieldname})
             doc.delete(ignore_permissions=True)
-            creqit.db.commit()  # Commit eklendi
+            creqit.db.commit()
             creqit.clear_cache(doctype=parent)
             return {"status": "success", "message": f"Field '{fieldname}' deleted from {parent}."}
 
