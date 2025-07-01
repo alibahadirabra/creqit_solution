@@ -4,8 +4,8 @@ from creqit.model.document import Document
 @creqit.whitelist()
 def manage_docfield(action, **kwargs):
     try:
-        if action not in ["insert", "update", "delete"]:
-            return {"status": "error", "message": "Invalid action. Must be 'insert', 'update' or 'delete'."}
+        if action not in ["insert", "update", "delete", "get"]:
+            return {"status": "error", "message": "Invalid action. Must be 'insert', 'update', 'delete', or 'get'."}
 
         required_keys = ["parent", "fieldname"]
         for key in required_keys:
@@ -68,6 +68,10 @@ def manage_docfield(action, **kwargs):
             doc.delete(ignore_permissions=True)
             creqit.clear_cache(doctype=parent)
             return {"status": "success", "message": f"Field '{fieldname}' deleted from {parent}."}
+
+        elif action == "get":
+            doc = creqit.get_doc("DocField", {"parent": parent, "fieldname": fieldname})
+            return {"status": "success", "data": doc.as_dict()}
 
     except Exception as e:
         creqit.log_error(creqit.get_traceback(), "manage_docfield API Error")
