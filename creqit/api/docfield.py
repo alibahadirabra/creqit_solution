@@ -48,6 +48,7 @@ def manage_docfield(action, **kwargs):
                         doc.set(column, value)
 
             doc.insert(ignore_permissions=True)
+            creqit.db.commit()  # Commit eklendi
             creqit.clear_cache(doctype=parent)
             return {"status": "success", "message": f"Field '{fieldname}' inserted into {parent}."}
 
@@ -60,12 +61,14 @@ def manage_docfield(action, **kwargs):
                     except:
                         doc.set(key, val)
             doc.save(ignore_permissions=True)
+            creqit.db.commit()  # Commit eklendi
             creqit.clear_cache(doctype=parent)
             return {"status": "success", "message": f"Field '{fieldname}' updated in {parent}."}
 
         elif action == "delete":
             doc = creqit.get_doc("DocField", {"parent": parent, "fieldname": fieldname})
             doc.delete(ignore_permissions=True)
+            creqit.db.commit()  # Commit eklendi
             creqit.clear_cache(doctype=parent)
             return {"status": "success", "message": f"Field '{fieldname}' deleted from {parent}."}
 
