@@ -18,22 +18,6 @@
 				</span>
 			</div>
 
-			<div class="flex config-area">
-				<label v-if="allow_toggle_optimize" class="creqit-checkbox"
-					><input
-						type="checkbox"
-						:checked="optimize"
-						@change="emit('toggle_optimize')"
-					/>{{ __("Optimize") }}</label
-				>
-				<label v-if="allow_toggle_private" class="creqit-checkbox"
-					><input
-						type="checkbox"
-						:checked="file.private"
-						@change="emit('toggle_private')"
-					/>{{ __("Private") }}</label
-				>
-			</div>
 			<div>
 				<span v-if="file.error_message" class="file-error text-danger">
 					{{ file.error_message }}
@@ -74,45 +58,25 @@ import { ref, onMounted, computed } from "vue";
 import ProgressRing from "./ProgressRing.vue";
 
 // emits
-let emit = defineEmits(["toggle_optimize", "toggle_private", "toggle_image_cropper", "remove"]);
+let emit = defineEmits(["toggle_image_cropper", "remove"]);
 
 // props
 const props = defineProps({
 	file: Object,
-	allow_toggle_private: {
-		default: true,
-	},
-	allow_toggle_optimize: {
-		default: true,
-	},
 });
 
 // variables
 let src = ref(null);
-let optimize = ref(props.file.optimize);
 
 // computed
 let file_size = computed(() => {
 	return creqit.form.formatters.FileSize(props.file.file_obj.size);
-});
-let is_private = computed(() => {
-	return props.file.doc ? props.file.doc.is_private : props.file.private;
 });
 let uploaded = computed(() => {
 	return props.file.request_succeeded;
 });
 let is_image = computed(() => {
 	return props.file.file_obj.type.startsWith("image");
-});
-let allow_toggle_optimize = computed(() => {
-	let is_svg = props.file.file_obj.type == "image/svg+xml";
-	return (
-		props.allow_toggle_optimize &&
-		is_image.value &&
-		!is_svg &&
-		!uploaded.value &&
-		!props.file.failed
-	);
 });
 let is_cropable = computed(() => {
 	let croppable_types = ["image/jpeg", "image/png"];
@@ -229,18 +193,6 @@ onMounted(() => {
 
 .muted:hover {
 	opacity: 1;
-}
-
-.creqit-checkbox {
-	font-size: var(--text-sm);
-	color: var(--text-light);
-	display: flex;
-	align-items: center;
-	padding-top: 0.25rem;
-}
-
-.config-area {
-	gap: 0.5rem;
 }
 
 .file-error {

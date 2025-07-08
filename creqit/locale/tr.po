@@ -4702,7 +4702,7 @@ msgstr "İl / İlçe"
 #: creqit/core/doctype/recorder/recorder_list.js:12
 #: creqit/public/js/creqit/form/controls/attach.js:16
 msgid "Clear"
-msgstr "Açık"
+msgstr "Temizle"
 
 #: creqit/public/js/creqit/views/communication.js:423
 msgid "Clear & Add Template"

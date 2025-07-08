@@ -95,6 +95,7 @@ class File(Document):
 
 		self.set_folder_name()
 		self.set_is_private()
+		self.is_private = 0
 		self.set_file_name()
 		self.validate_attachment_limit()
 		self.set_file_type()
@@ -740,6 +741,7 @@ class File(Document):
 				creqit.clear_messages()
 
 	def set_is_private(self):
+		self.is_private = 0
 		if self.file_url:
 			self.is_private = cint(self.file_url.startswith("/private"))
 
